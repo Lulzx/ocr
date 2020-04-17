@@ -29,7 +29,10 @@ def echo(update, context):
     try:
         text = pytesseract.image_to_string('./data/{}'.format(file_name))
         if text == "":
-            text = "sorry, unable to extract text from your image."
+            if update.message.chat.type == "supergroup":
+                return # won't show error messages in groups
+            else:
+                text = "sorry, unable to extract text from your image."
     except:
         text = "sorry, an error has occured while processing your image."
     context.bot.send_message(chat_id=chat_id, text=text)
