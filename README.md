@@ -30,18 +30,22 @@ If you are using a different release of ubuntu, then replace bionic with the res
 
 deb http://archive.ubuntu.com/ubuntu bionic universe
 ```
+## Deploy
+
+```
+git clone --depth=1 https://github.com/lulzx/ocr.git && cd ocr
+pip3 install -r requirements.txt
+```
 
 ### Telegram Bot
 
 ```
-pip3 install -r requirements.txt
 python3 bot.py <your-token-here>
 ```
 
 ### Flask based web API service
 
 ```
-pip3 install -r requirements.txt
 python3 api.py
 ```
 
