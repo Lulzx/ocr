@@ -1,0 +1,5 @@
+pytesseract
+requests
+python-telegram-bot
+flask
+pillow
